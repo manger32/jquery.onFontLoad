@@ -19,7 +19,7 @@ $.fontDetector=(function(){
 					_private.fonts[font].height!=el.height()
 				){
 					$(document).trigger('fontload',{
-						'fontName': font
+						name: font
 					});
 					clearInterval(_private.fonts[font].interval);
 				}

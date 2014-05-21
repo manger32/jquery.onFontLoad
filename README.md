@@ -18,6 +18,6 @@ $.fontDetector('Open Sans');
 
 ```javascript
 $(document).on('fontload',function(event, font){
-    alert(font.name+' is ready!');
+    console.log(font.name+' is ready!');
 });
 ```

@@ -25,4 +25,5 @@ $(document).on('fontload',function(event, font){
 ```
 
 Поля объекта `font`:
+
     * `name`: имя шрифта.

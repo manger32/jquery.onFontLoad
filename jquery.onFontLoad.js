@@ -1,6 +1,7 @@
 $.fontDetector=(function(){
 	var _private={
-		fonts: {}
+		fonts: {},
+		c: $('<div class="jq-olf"></div>')
 	};
 	var _public={
 		watch: function(font){
@@ -8,7 +9,7 @@ $.fontDetector=(function(){
 			if(_private.fonts[font]!==undefined) return; else _private.fonts[font]={};
 			var el=$('<div class="jq-ofl-one">font</div>');
 			el.css('font-family','_');
-			$('body').append(el);
+			_private.c.append(el);
 			_private.fonts[font].width=el.width();
 			_private.fonts[font].height=el.height();
 			el.css('font-family',font);
@@ -26,7 +27,8 @@ $.fontDetector=(function(){
 			},10);
 		}
 	};
-	$('head').append('<style>.jq-ofl-one{position:absolute;top:0px;left:0px;font-size:1000px;visibility:hidden;}</style>');
+	$('head').append('<style>.jq-olf{position:absolute;top:0px;left:0px;width:100%;height:0px;overflow:scroll;}.jq-ofl-one{font-size:1000px;visibility:hidden;}</style>');
+	$('body').append(_private.c);
 	_public.watch();
 	return _public;
 })();

@@ -19,9 +19,9 @@ $.fontDetector.watch('Open Sans');
 Кроме объекта `event` в callback будет передан объект `font`, в котором будет указан шрифт, для которого произошло событие.
 
 ```javascript
-$(document).on('fontload',function(event, font){
-    console.log(font.name+' is ready!');
-});
+$(document).on('fontload', function(event, font){
+    console.log(font.name + ' is ready!')
+})
 ```
 
 #### Поля объекта `font`:

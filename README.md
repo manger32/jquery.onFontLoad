@@ -20,7 +20,7 @@ $.fontDetector.watch('Open Sans');
 
 ```javascript
 $(document).on('fontload', function(event, font){
-    console.log(font.name + ' is ready!')
+    console.log(font.name + ' is ready!');
 });
 ```
 
